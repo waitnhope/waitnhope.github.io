@@ -1,27 +1,29 @@
 ---
-layout: base
+layout: page
+title: Well, Hello There!
 ---
-<div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
+<ul class="posts">
+    {% for post in paginator.posts %}
+    <li class="post">
+        <small>{{ post.date | date_to_string }}</small>
+        <small><a style="color:grey" href="{{ BASE_PATH }}{{ post.url }}#disqus_thread"></a></small>
+        <br>
+        <a class="nice-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="nice-text">{{ post.content | strip_html | truncatewords: 50 }} <a href="{{ post.url | relative_url }}">Read more!</a></p>
+    </li>
+    {% endfor %}
+    {% include pagination.html %}
+</ul>
 
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %}
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nagekar';
 
-        {% if site.compass.tagline %}
-        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-        {% endif %}
-    </header>
-    <main>
-      {% if site.compass.include_content %}
-      <div class="content">
-        {% include content.html %}
-      </div>
-      {% endif %}
-    </main>
-</div>
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
