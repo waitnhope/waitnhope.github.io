@@ -10,14 +10,14 @@ highlighter: rouge
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Soot Spirits
+title : Wait and Hope
 tagline: Code, Science, Philosophy, Humor
 author :
   name : waitnhope
   email : waitnhope@outlook.com
   github : waitnhope
-  #  twitter : abhisheknagekar
-  #  feedburner : AbhishekN
+  # twitter : abhisheknagekar
+  # feedburner : AbhishekN
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -27,7 +27,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : 
+  production_url : http://waitnhope.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -56,7 +56,7 @@ JB :
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : "waitnhope.github.io"
+  BASE_PATH : waitnhope.github.io
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
@@ -71,8 +71,8 @@ JB :
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
-  archive_path: /archive.html
-  categories_path : /categories.html
+  # archive_path: /archive.html
+  # categories_path : /categories.html
   tags_path : /tags.html
   atom_path : /atom.xml
   rss_path : /rss.xml
